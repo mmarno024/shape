@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+window.onload = draw; // Execute draw function when DOM is ready
+function draw() {
+        // Assign our canvas element to a variable 
+        var canvas = document.getElementById("canvas1");
+	// Create the HTML5 context object to enable draw methods
+        var ctx = canvas.getContext("2d"); 
+	// Draw Filled Shape 1 (center triangle of logo)
+        ctx.beginPath();
+	ctx.moveTo(100, 50);
+	ctx.lineTo(130, 100);
+	ctx.lineTo(70, 100);
+	ctx.fillStyle = "rgba(0,0,0,1)";
+	ctx.fill();
+	// Draw Filled Shape 2 (left flap of logo)
+	ctx.beginPath();
+        ctx.moveTo(72, 60);
+        ctx.lineTo(85, 72);
+        ctx.lineTo(71, 94);
+	ctx.lineTo(50, 70);
+	ctx.lineTo(65, 40);
+	ctx.fillStyle = "rgba(0,0,0,1)";
+        ctx.fill();
+	// Your homework is to Draw Filled Shape 3 here (right flap)
+	// to complete the shape of the WorldOfWebcraft.com logo
+}
+</script>
+</head>
+<body>
+<canvas id="canvas1" width="400" height="300"></canvas>
+</body>  
+</html>
